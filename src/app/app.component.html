@@ -1,0 +1,18 @@
+<hello name="{{ name }}"></hello>
+<p>
+  <input type="text" placeholder="Ingrese tarea nueva" [(ngModel)]="title">
+  
+</p>
+<button (click)="addItem()">Add Item</button>
+<div *ngIf="tareas.length===0">No hay tareas para realizar</div>
+  <ul>
+    <li *ngFor="let tarea of tareas; index as i">
+      {{i}} - {{tarea}} <button (click)=" DeleteItem(i)">Delete</button>
+    </li>
+  </ul>
+  <h2>Productos</h2>
+  <ol>
+    <li *ngFor="let product of products" >
+     {{product.title}}
+    </li>
+  </ol>
